@@ -227,39 +227,6 @@ Because `completion_rate` and `dropout_rate` have an extreme correlation ($-0.99
 
 ---
 
-## 🔍 Critical Analysis & Governance (Mandatory Questions)
-
-### 1. Which features most influenced instructor effectiveness, and why?
-`completion_rate` (29.7%), `dropout_rate` (27.4%), and `feedback_response_rate` (14.0%) had the largest influence. Student retention directly captures whether learners remain engaged until course completion. High response rates indicate active learner participation and trust, providing stronger statistical confidence in reported feedback.
-
-### 2. Which variables could be misleading or confounded?
-- **Collinearity:** `completion_rate` and `dropout_rate` share $99\%$ inverse variance at the instructor level.
-- **Course Difficulty:** Complex subjects (e.g., Advanced Systems) inherently have lower completion rates and quiz gains than introductory courses, independent of teaching skill.
-- **Self-Selection & Feedback Response Bias:** When response rates are low ($40\%–50\%$), feedback ratings often reflect extreme sentiment (polarized satisfaction/dissatisfaction) rather than representative cohort satisfaction.
-- **Learner Baseline Discrepancies:** Pre-existing learner motivation and prior domain knowledge heavily influence submission rates and watch times.
-
-### 3. How could this model fail in real-world usage?
-- **Demographic Shifts:** Changes in student cohort experience levels could degrade model calibration.
-- **Gaming Telemetry:** Instructors incentivized on watch time or completion may assign passive video checkpoints or inflate quiz scores.
-- **Sample Size Volatility:** Newer instructors teaching only 2–3 batches could be unfairly classified due to small sample size noise.
-- **Circular Target Construction:** Because the ML target tiers were derived from mathematical combinations of the features, high accuracy proves mathematical recoverability, not an external, ground-truth validation of teaching excellence.
-
-### 4. What additional data would improve the analysis?
-- **Cohort Pre-Assessments:** Standardized pre-course diagnostic scores to compute true value-added learning gains.
-- **Batch Metadata:** Cohort size, timezone distribution, and mandatory vs. elective course status.
-- **Course Complexity Normalization:** Normalizing metrics against course-level baselines (benchmarking an instructor against peers teaching the same subject).
-- **Qualitative Feedback:** Natural language processing (NLP) sentiment and thematic analysis on qualitative student comments.
-- **Long-Term Outcomes:** Post-course retention, subsequent course pass rates, or career outcomes.
-
-### 5. Should this model be used for instructor performance evaluation? Why or why not?
-> **Verdict: NO as an automated evaluation tool; YES as a decision-support and diagnostic system.**
-
-The model should **never** be used autonomously to determine compensation, promotion, or contract renewal. Because observational telemetry is confounded by course difficulty, cohort demographics, and survey response bias, automated scoring risks penalizing instructors assigned to difficult topics or struggling student groups.
-
-However, the framework serves as a valuable **diagnostic decision-support tool** for academic managers to identify instructors who would benefit from mentorship, highlight top-tier practices for peer sharing, and isolate curriculum design issues.
-
----
-
 ## 🚀 Project Structure & Execution
 
 ### Directory Layout
