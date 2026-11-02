@@ -257,7 +257,7 @@ jupyter notebook Instructor_Effectiveness_Modeling.ipynb
 ---
 
 ## 📜 Authors & Citation
-- **Project:** Instructor Effectiveness Modeling Assignment
+Created by [MohammadAsad](https://github.com/MohammadAsad123)
+- **Project:** Instructor Effectiveness Modeling
 - **Domain:** EdTech Learning Analytics, Faculty Development & Predictive Modeling
-- **Date:** September 2026
 
